@@ -18,8 +18,10 @@ NASA Mars Explorer Dashboard는 NASA에서 제공하는 API와 Google News API�
   - NASA 탐사 로버의 최신 화성 사진
   - 날짜/솔 기반 이미지 검색 및 필터링
 - 📰 **우주 뉴스 및 이벤트**
-  - 화성 관련 최신 뉴스 제공
-  - 우주 날씨 이벤트 정보
+  - 신뢰할 수 있는 우주 과학 뉴스 소스에서 제공하는 최신 화성 관련 뉴스
+  - 반응형 카드 형태의 뉴스 레이아웃
+  - 제목, 출처, 저자, 날짜 정보 제공
+  - 고품질 뉴스 썸네일 이미지
 - 🌠 **오늘의 천문 사진**
   - NASA APOD API 기반 일일 천문 사진
   - 과학적 해설 제공
@@ -91,8 +93,10 @@ The NASA Mars Explorer Dashboard is a comprehensive platform that provides real-
   - Latest Mars photos from NASA exploration rovers
   - Image search and filtering by date/sol
 - 📰 **Space News and Events**
-  - Latest Mars-related news
-  - Space weather event information
+  - Latest Mars-related news from trusted space science news sources
+  - Responsive card-based news layout
+  - Title, source, author, and date information
+  - High-quality news thumbnail images
 - 🌠 **Astronomy Picture of the Day**
   - Daily astronomical photos from NASA APOD API
   - Scientific explanations provided

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 151 71 255;    /* #9747FF - 보라색 */
+    --color-secondary: 99 102 241;   /* #6366F1 - 인디고 */
+    --color-success: 34 197 94;      /* #22C55E - 초록색 */
+    --color-warning: 234 179 8;      /* #EAB308 - 노란색 */
+    --color-error: 239 68 68;        /* #EF4444 - 빨간색 */
+    --color-info: 59 130 246;        /* #3B82F6 - 파란색 */
+    
+    --color-dark: 17 17 27;          /* #11111B - 진한 배경 */
+    --color-dark-darker: 14 14 22;   /* #0E0E16 - 더 진한 배경 */
+    --color-dark-lighter: 36 36 47;  /* #24242F - 밝은 배경 */
+    
+    --color-text-primary: 255 255 255;      /* #FFFFFF - 흰색 텍스트 */
+    --color-text-secondary: 165 166 181;    /* #A5A6B5 - 회색 텍스트 */
+  }
+}
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-dark text-text-primary;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply relative overflow-hidden rounded-2xl bg-dark-lighter/50 backdrop-blur-md border border-white/5;
+  }
+
+  .stats-card {
+    @apply card p-4 hover:bg-dark-lighter/70 transition-colors duration-200;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white hover:shadow-lg hover:shadow-primary/25;
+  }
+
+  .btn-ghost {
+    @apply text-text-secondary hover:text-text-primary hover:bg-white/5;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary/10 text-primary;
+  }
+
+  .badge-success {
+    @apply bg-success/10 text-success;
+  }
+
+  .badge-warning {
+    @apply bg-warning/10 text-warning;
+  }
+
+  .badge-error {
+    @apply bg-error/10 text-error;
+  }
+
+  .chart-grid {
+    @apply stroke-white/5;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-lighter/20;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary/20 text-white;
+}
